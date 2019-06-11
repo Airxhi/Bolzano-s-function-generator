@@ -15,6 +15,10 @@ def calculate_interval_points(k, a, b, A, B):
     return [(a,A), (a + 3.0/8.0 * (b - a),A+5.0/8.0*(B-A)), ((a+b)/2.0, A + (B-A)/2.0), (a + 7.0/8.0 * (b - a), B + 1/8*(B-A)), (b,B)]
 
 def main():
+    if len(sys.argv) < 6:
+        print("format: python3 " + sys.argv[0] + " k a b A B [show_k1]")
+        exit()
+
     k = int(sys.argv[1])
     a = int(sys.argv[2])
     b = int(sys.argv[3])
